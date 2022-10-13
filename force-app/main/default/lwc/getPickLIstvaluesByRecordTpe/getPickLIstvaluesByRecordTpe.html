@@ -1,0 +1,16 @@
+<template>
+    <template if:true={propertyOrFunction.data}>
+        <lightning-card  title="getPICKLISTvALUESBYRECORDTYPE">
+            
+                <lightning-combobox 
+                name="progress"
+                label="Rating values"
+                value={rating}
+                placeholder="Select Rating"
+                options={rating}
+                onchange={handleChange} ></lightning-combobox>
+            
+        </lightning-card>
+</template>
+    
+</template>

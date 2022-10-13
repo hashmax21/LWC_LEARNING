@@ -1,0 +1,14 @@
+<template>
+    <template if:true={propertyOrFunction.data}><lightning-card  title={propertyOrFunction.data.apiName}>
+        <lightning-combobox
+        name="picklist vals for account"
+        label="picklist vals for account"
+        value={value}
+        placeholder="Select Progress"
+        options={options}
+        onchange={handleChange} ></lightning-combobox>
+  
+    
+    </lightning-card></template>
+        
+</template>

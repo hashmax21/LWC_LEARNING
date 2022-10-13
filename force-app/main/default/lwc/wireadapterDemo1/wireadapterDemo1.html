@@ -1,0 +1,9 @@
+<template>
+    <lightning-card  title="GET RECORD ADAPTER">
+    {name}{email}
+    </lightning-card>
+    <lightning-card  title="GET object adapter">
+        <template if:true={userhandlerGetObject.data}>{userhandlerGetObject.data.defaultRecordTypeId}</template>
+        
+        </lightning-card>
+</template>

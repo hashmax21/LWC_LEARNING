@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+    <target>
+    lightning__AppPage
+    </target>
+</targets>
+    
+</LightningComponentBundle>
+<!-- (Lecture32)  1. We change the isExposed prop to true so that the component is visible in the App 
+2. We have to define the target to show in which page(Home Page , App page etc ) should our lightning component be visible
+
+-->

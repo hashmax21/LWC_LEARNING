@@ -1,0 +1,36 @@
+<template>
+    
+    
+    <lightning-card  title="Hello">
+        <div class="slds-m-around_medium">
+            <lightning-input
+                name="enter-search"
+                label="Search when user hits the 'enter' key"
+                type="search"
+                onchange={searchHandler}
+                value={key}
+            ></lightning-input> 
+        </div>
+        <lightning-layout multiple-rows>
+        <template if:true={bookData}>
+            <template for:each={bookData.items}  for:item='book'>
+                <lightning-layout-item key={book.id} padding="around-small" size="3" >
+                    <div class="slds-box slds-p-around_x-medium slds-text-align_center" >
+                      <!-- <template if:true={book.volumeInfo.imageLinks}> -->
+                         <img src={book.volumeInfo.imageLinks.smallThumbnail} height="300px"/> 
+                      <!-- </template> -->
+                      <!-- <template if:false={book.volumeInfo.imageLinks}>  -->
+                        <!-- vbccbh  -->
+                      <!-- </template> -->
+                        <div class="slds-text-heading_small"> <strong>Avg Rating-{book.volumeInfo.averageRating}</strong></div>
+                        <div class="slds-text-heading_small"> <strong>heading-{book.volumeInfo.title}</strong></div>
+                        <div class="slds-text-heading_small"> <strong>Published date-{book.volumeInfo.publishedDate}</strong></div>
+                        
+                    </div>
+                </lightning-layout-item>
+            </template>
+        </template>
+    </lightning-layout>
+    </lightning-card>
+</template>
+

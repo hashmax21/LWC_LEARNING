@@ -1,0 +1,8 @@
+<template>
+    <lightning-card title="get object Infos">
+    <template if:true={dataReceived}>
+        <template for:each={dataReceived.results} for:item="item">
+            <div key={a}>{item.result.apiName}</div></template>
+        </template>
+    </lightning-card>
+</template>

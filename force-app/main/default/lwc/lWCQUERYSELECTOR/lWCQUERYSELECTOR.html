@@ -1,0 +1,19 @@
+
+    <template>
+        
+                   
+                    <lightning-card  title="query selctor demo">
+                        <div><button onclick={fetch}>click me</button>
+                            <h1 class ='heading'>io ak dihcs</h1>
+                        <p class ='paar'> i am paragraph</p>
+                            <template for:each={user} for:item="username">
+                                    <div class = 'data' key = {keys}>
+                                        {username}
+                                    </div>
+                                    
+                            </template>
+                        </div>
+                    </lightning-card>
+
+               
+    </template>

@@ -1,0 +1,45 @@
+<template>
+    <lightning-card  title="Practice 2 way binding">
+        <div class="slds-p-around_small lgc-bg">
+            <!-- <input type="text" onkeyup={onchange}> -->
+            <lightning-input type="text" label="Enter some text" onchange={onchange}></lightning-input>
+        </div>    
+        <div class="slds-p-left_small" >The input text from screen is {text}</div>
+    </lightning-card>
+<!-- example of @track -->
+    <lightning-card  title="Practice @track">
+        <div class="slds-p-around_medium lgc-bg">
+            <!-- <input type="text" onkeyup={onchange}> -->
+            <lightning-input type="text" label="Enter some text" onchange={onchangeTrack}></lightning-input>
+        </div>    
+        <div class="slds-p-left_small" >The city is  {person.city}</div>
+    </lightning-card>
+<!-- example of getter -->
+    <lightning-card  title="Practice getter">   
+        <div class="slds-p-left_small" >{getterDatafn}</div>
+        <div class="slds-p-left_small" >{getterDatafnn}</div>
+    </lightning-card>
+<!-- example of iterator -->
+    <lightning-card  title="Iterator exmaple">
+        <lightning-button variant="brand" label="Click Me" title="Primary action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+        <template iterator:it={ietratorDemo}>
+            <div key={it.value}>
+                <template if:true={it.first}><div><strong>The 1st val is {it.value}</strong></div></template>
+                <div > The vals of Itretaor are{it.value} </div>
+                <template if:true={it.last}><div><strong>The last val is{it.value}</strong></div></template>
+            </div>
+        </template>
+    </lightning-card>
+    <!-- example of For Each -->
+    <lightning-card  title="Iterator exmaple">
+        <lightning-button variant="brand" label="Click Me" title="Primary action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+        <template for:each={forEachDemo} for:item="element">
+            <div key={a}>
+               
+                <div > The vals of for Each are{element} </div>
+                
+            </div>
+        </template>
+    </lightning-card>
+</template>
+

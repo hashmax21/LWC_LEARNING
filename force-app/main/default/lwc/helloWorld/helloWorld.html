@@ -1,0 +1,69 @@
+<template>
+
+            <lightning-card  title="Hello">
+                <div class="slds-var-m-around_xx-small">
+            <lightning-input type="text" label="Enter some text" onkeyup={changeHandler}></lightning-input>
+                </div>
+        </lightning-card>
+        <div>the changed value is {value}</div>
+         
+        <lightning-card  title="Address">
+            <div class="slds-var-m-around_xx-small">
+        <lightning-input type="text" label="Enter Address" onkeyup={changeAddresshandler}></lightning-input>
+            </div>
+    </lightning-card>
+    <div>the changed value is {Address.City}</div>
+      
+ 
+<lightning-card  title="Getter Demo">
+    <div class="slds-var-m-around_xx-small">
+<lightning-input type="text" label="getter DEmo" onkeyup={changeAddresshandler}></lightning-input>
+    </div>
+</lightning-card>
+<div>the val of the array element is {returnArrVal}</div>
+
+
+<lightning-card  title="Conditional rendering">
+    <div class="slds-var-m-around_xx-small">
+        <lightning-button variant="brand" label="Click me" title="Primary action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+    </div>
+</lightning-card>
+<template if:true={ifVisible}>
+    <div>show data</div>
+     </template>
+     <template if:false={ifVisible}>
+        <div>you cant see the data click button</div>
+         </template>
+
+         <lightning-card  title="Hello">
+            
+                <template for:each={cars} for:item="xx"> <div key = {csd}> 
+                    <ul class="slds-has-dividers_around-space">
+                        <li class="slds-item">{xx}</li>
+                        </ul>
+
+                        <div class="slds-m-around_x-small"></div>
+                    </div>
+                </template>
+            
+    </lightning-card>
+    
+    <lightning-card  title="Iterator demo">
+            
+        <template iterator:it={ceolist}> <div key = {csd}>
+            <template if:true= {it.first}>
+                <div>
+                    i am the heading {it.first}
+                </div>
+                 </template> 
+            <ul class="slds-has-dividers_around-space">
+                <li class="slds-item">The names of the ceos are {it.value.name}</li>
+                </ul>
+
+                <div class="slds-m-around_x-small"></div>
+            </div>
+        </template>
+    
+</lightning-card>
+
+</template>

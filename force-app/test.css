@@ -1,0 +1,13 @@
+.parent{
+display: flex;
+border: 1px solid black;
+}
+
+.child{
+background-color:pink;
+height: 120px;
+width: 120;
+border: 2px solid black;
+
+margin: 2px;
+}

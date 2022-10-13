@@ -1,0 +1,56 @@
+<template>
+    <lightning-card  title="Apex in lwc">
+        <template if:true={accounts.data}>
+            <p>asdhcj</p>
+          <template for:each={accounts.data} for:item="account">
+            <div key={account.id}> 
+                <p>Name : {account.Name}</p>
+                <p>Type : {account.Type}</p>
+                <p>Industry : {account.Industry}</p>
+            </div>
+        </template>  
+    </template> 
+</lightning-card>
+
+
+<lightning-card  title="Apex in lwc">
+<template if:true={accountList}>
+        <p>saas</p>
+    <template for:each={accountList} for:item="account">
+        <div key={account.id}> 
+            <p>Name : {account.Name}</p>
+            <p>Type : {account.newType}</p>
+            <p>Industry : {account.Industry}</p>
+        </div>
+    </template>  
+</template> 
+</lightning-card>
+
+</lightning-card>
+<lightning-card  title="Apex in lwc with parameters">
+    <template if:true={proporfn.data}>
+        <p>saas</p>
+      <template for:each={proporfn.data} for:item="account">
+        <div key={account.id}> 
+            <p>Name : {account.Name}</p>
+            <p>Type : {account.Type}</p>
+            <p>Industry : {account.Industry}</p>
+        </div>
+    </template>  
+</template> 
+</lightning-card>
+
+
+<lightning-card  title="Apex in lwc with intrinsic call">
+    <lightning-button variant="brand" label="Base" title="Looks like a link" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+    <template if:true={accountsss}>
+      <template for:each={accountsss} for:item="account">
+        <div key={account.Id}> 
+            <p>Name : {account.Name}</p>
+            <p>Type : {account.Type}</p>
+            <p>Industry : {account.Industry}</p>
+        </div>
+    </template>  
+</template> 
+</lightning-card>
+</template>
